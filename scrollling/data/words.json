@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "base_word": "teacher",
+    "part_of_speech": "noun",
+    "image": "images/teacher.png",
+    "translations": {
+      "en": "teacher",
+      "ru": "учитель",
+      "es": "profesor"
+    }
+  },
+  {
+    "id": 2,
+    "base_word": "explain",
+    "part_of_speech": "verb",
+    "image": "images/explain.png",
+    "translations": {
+      "en": "explain",
+      "ru": "объяснять",
+      "es": "explicar"
+    }
+  }
+]
+
