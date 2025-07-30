@@ -3,23 +3,66 @@
     "id": 1,
     "base_word": "teacher",
     "part_of_speech": "noun",
-    "image": "images/teacher.png",
+    "image": "https://placehold.co/150x150/b285ff/white?text=Teacher",
     "translations": {
-      "en": "teacher",
-      "ru": "учитель",
-      "es": "profesor"
+      "en": "Teachers",
+      "ru": "Учителя",
+      "es": "Profesores"
     }
   },
   {
     "id": 2,
+    "base_word": "always",
+    "part_of_speech": "adverb",
+    "image": "https://placehold.co/150x150/68a0da/white?text=Always",
+    "translations": {
+      "en": "always",
+      "ru": "всегда",
+      "es": "siempre"
+    }
+  },
+  {
+    "id": 3,
     "base_word": "explain",
     "part_of_speech": "verb",
-    "image": "images/explain.png",
+    "image": "https://placehold.co/150x150/64c664/white?text=Explain",
     "translations": {
       "en": "explain",
-      "ru": "объяснять",
-      "es": "explicar"
+      "ru": "объясняют",
+      "es": "explican"
+    }
+  },
+  {
+    "id": 4,
+    "base_word": "difficult",
+    "part_of_speech": "adjective",
+    "image": "https://placehold.co/150x150/eed972/black?text=Difficult",
+    "translations": {
+      "en": "difficult",
+      "ru": "сложные",
+      "es": "difíciles"
+    }
+  },
+  {
+    "id": 5,
+    "base_word": "topic",
+    "part_of_speech": "noun",
+    "image": "https://placehold.co/150x150/f2a07b/white?text=Topics",
+    "translations": {
+      "en": "topics",
+      "ru": "темы",
+      "es": "temas"
+    }
+  },
+  {
+    "id": 6,
+    "base_word": "clearly",
+    "part_of_speech": "adverb",
+    "image": "https://placehold.co/150x150/fcb44a/white?text=Clearly",
+    "translations": {
+      "en": "clearly",
+      "ru": "ясно",
+      "es": "claramente"
     }
   }
 ]
-

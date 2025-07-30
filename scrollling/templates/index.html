@@ -1,31 +1,48 @@
-<!-- Где-нибудь в удобном месте, например, в шапке или углу экрана -->
-<div class="position-absolute top-0 end-0 p-3">
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-            <!-- Отображаем текущий язык -->
-            {{ current_lang.upper() }}
-        </button>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/?lang=en">English</a></li>
-            <li><a class="dropdown-item" href="/?lang=ru">Русский</a></li>
-            <li><a class="dropdown-item" href="/?lang=es">Español</a></li>
-        </ul>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollLing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("{{ url_for('static', filename='js/sw.js') }}");
+      }
+    </script>
+</head>
+<body class="bg-light">
 
-<!-- Ваш основной контент -->
-<div class="container-fluid h-100">
-    <div class="row h-100">
-        <div class="col-12 words-center">
-            <!-- Теперь слова генерируются циклом из данных, переданных с бэкенда -->
-            {% for item in words %}
-                <span style="color: ...;">{{ item.word }}</span>
-                <!-- Сюда же позже добавим картинку item.image -->
+    <!-- Переключатель языка -->
+    <div class="position-absolute top-0 end-0 p-3">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                {{ current_lang.upper() }}
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="/?lang=en">English</a></li>
+                <li><a class="dropdown-item" href="/?lang=ru">Русский</a></li>
+                <li><a class="dropdown-item" href="/?lang=es">Español</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Основной контейнер -->
+    <div class="container d-flex align-items-center justify-content-center min-vh-100">
+        <div class="d-flex flex-wrap justify-content-center">
+            <!-- Динамически генерируем карточки слов -->
+            {% for word in sentence %}
+            <div class="word-card text-center m-2">
+                <span class="word-text h4">{{ word.text }}</span>
+                <img src="{{ word.image_url }}" alt="{{ word.text }}" class="word-image rounded-3 mt-2">
+            </div>
             {% endfor %}
         </div>
     </div>
-</div>
 
-<!-- Не забудьте подключить JS от Bootstrap 5 для работы выпадающего меню -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
