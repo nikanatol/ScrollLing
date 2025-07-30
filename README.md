@@ -25,8 +25,8 @@ To get a local copy up and running, follow these simple steps.
 
 1.  **Clone the repo:**
     ```
-    git clone https://github.com/your_username/scrollling-app.git
-    cd scrollling-app
+    git clone https://github.com/nikanatol/ScrollLing.git
+    cd ScrollLing
     ```
 2.  **Create and activate a virtual environment:**
     ```
